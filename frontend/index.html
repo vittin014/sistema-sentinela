@@ -13,7 +13,8 @@
 
 <script>
 function login() {
-  fetch("http://localhost:3000/login", {
+  // ENDEREÇO ALTERADO DE LOCALHOST PARA A URL DO RENDER
+  fetch("https://onrender.com", {
     method: "POST",
     headers: {"Content-Type": "application/json"},
     body: JSON.stringify({
