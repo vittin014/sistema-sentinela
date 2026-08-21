@@ -1,0 +1,142 @@
+@import url('https://googleapis.com');
+
+:root {
+  --primary-color: #0284c7;
+  --primary-hover: #0369a1;
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --border-color: #cbd5e1;
+  --radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Centralização exclusiva para a página que tiver a classe .login-body */
+body.login-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container padrão para as páginas normais do hospital */
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  background: var(--card-bg);
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  border: 1px solid var(--border-color);
+}
+
+/* Box exclusivo do login */
+.login-box {
+  max-width: 400px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-main);
+}
+
+.login-box h2 {
+  justify-content: center;
+}
+
+/* Componentes de Formulário */
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  background-color: #f8fafc;
+  font-size: 16px;
+  color: var(--text-main);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--primary-color);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+}
+
+button:active {
+  transform: scale(0.99);
+}
+
+.card {
+  border: 1px solid var(--border-color);
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.verde, .amarelo, .vermelho {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.verde { background: #d1fae5; color: #065f46; }
+.amarelo { background: #fef3c7; color: #92400e; }
+.vermelho { background: #fee2e2; color: #991b1b; }
+
+.form-footer {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+}
